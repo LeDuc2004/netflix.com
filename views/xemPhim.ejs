@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Việt Nam – Xem chương trình truyền hình trực tuyến, Xem phim trực tuyến</title>
+    <link rel = "icon" href = "https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.png" type = "image/x-icon">
+    <link rel="stylesheet" href="test.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<style>
+
+    *{
+        margin: 0;
+        font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+        
+    }
+    ::-webkit-scrollbar {
+  width: 0.1px;
+  background-color: rgba(128, 128, 128, 0.15);
+}
+::-webkit-scrollbar-thumb {
+  max-height: 10px;
+  background-color: rgba(128, 128, 128, 0.495);
+  border-radius: 5px;
+}
+
+
+    header {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background-color: black;
+  justify-content: space-between;
+  z-index: 1;
+  
+}
+#header-part1 {
+  display: flex;
+  color: white;
+}
+#header-part2 {
+  display: flex;
+  color: black;
+  align-items: center;
+  margin-right: 20px;
+}
+header ul {
+  margin-top: 20px;
+}
+header ul li {
+  list-style: none;
+  float: left;
+  margin-left: 20px;
+  font-size: 20px;
+}
+header ul li:hover {
+    color: #ff8a00;
+    cursor: pointer;
+}
+
+#favorite {
+  padding: 5px 10px;
+  border: 1px solid white;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: white;
+  margin-right: 10px;
+}
+#favorite:hover {
+    background-color:#ff8a00 ;
+    color: white;
+}
+#user{
+    padding: 5px 10px;border: 1px solid white;border-radius: 2px;cursor: pointer;display: flex;background-color: white;
+}
+#user:hover{
+    background-color:#ff8a00 ;
+    color: white;
+}
+#signout{
+    padding: 5px 10px;border: 1px solid white;border-radius: 2px;cursor: pointer;background-color: white;margin-right: 10px;margin-left: 8px;
+}
+#signout:hover{
+    background-color:#ff8a00 ;
+    color: white;
+}
+    footer{
+
+margin-top: 50px;
+background-color: black;
+color: #737373;
+display: flex;
+flex-direction: column;
+box-sizing: border-box;
+padding-bottom: 50px;
+
+
+}
+
+footer ul {
+width: 20%;
+margin-top: 20px;
+margin-bottom: 20px;
+margin-right: 20px;
+}
+footer ul li{
+list-style-type: none;
+margin-bottom: 15px;
+font-size: smaller;
+
+}
+.theli:hover {
+    color: #ff8a00;
+    cursor: pointer;
+}
+footer ul li a:hover{
+border-bottom: 1px solid gray;
+cursor: pointer;
+}
+#cc li{
+margin-left: -40px;
+}
+ ul li a{
+  text-decoration: none;
+  color: white;
+}
+ul li a:hover{
+color: #ff8a00;
+  cursor: pointer;
+}
+
+</style>
+<body style="background-color: #1a1a1a;">
+   
+    <%- include('header') %> 
+    <%- include('video') %> 
+
+
+    <%- include('footer') %> 
+
+</body>
+
+
+</html>

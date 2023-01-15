@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Việt Nam – Xem chương trình truyền hình trực tuyến, Xem phim trực tuyến</title>
+    <link rel = "icon" href = "https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.png" type = "image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <img
+        style="position: absolute; z-index: 1; margin: 20px 30px"
+        id="logo"
+        src="./img/Netflix_Logo_PMS.png"
+        alt=""
+        width="180px"
+      />
+      <img
+        id="nentc"
+        src="./img/VN-vi-20221228-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+        alt=""
+      />
+      <div class="blur">
+        <div class="btn">
+          <div class="btnlang">
+            <i style="font-size: 13px" class="fa-solid fa-globe"></i> Tiếng Việt
+            <i
+              style="transform: rotate(90deg)"
+              class="fa-solid fa-caret-right"
+            ></i>
+          </div>
+          <div class="btndn" onclick="dn()" >Đăng nhập</div>
+        </div>
+        <div class="content-header">
+          <h1
+            style="
+              max-width: 650px;
+              margin: auto;
+              font-size: 50px;
+              margin-top: 50px;
+            "
+          >
+            Chương trình truyền hình, phim không giới hạn và nhiều nội dung
+            khác.
+          </h1>
+          <div style="font-size: 1.625rem; margin: 20px 0">
+            Xem ở mọi nơi. Hủy bất kỳ lúc nào.
+          </div>
+          <h3 style="font-weight: lighter; margin-bottom: 15px">
+            Bạn đã sẵn sàng xem chưa? Nhập email để tạo hoặc kích hoạt lại tư
+            cách thành viên của bạn.
+          </h3>
+        </div>
+        <div class="input">
+          <div class="thanh">
+            <div class="input">
+              <input
+                style="padding-top: 0"
+                id="input1"
+                onclick="Clic()"
+                onblur="Blur()"
+                type="text"
+              />
+              <div id="diachi" onclick="dfhdshf()">Địa chỉ email</div>
+            </div>
+            <button onclick="dk()">Bắt đầu</button>
+            
+          </div>
+          <div id="errdk"  style="color: #e87c03;text-align:center;padding-right: 50px;" ></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="contain">
+      <div style="width: 500px">
+        <h1
+          style="
+            min-width: 500px;
+            margin: auto;
+            font-size: 50px;
+            margin-top: 50px;
+          "
+        >
+          Thưởng thức trên TV của bạn.
+        </h1>
+        <h2 style="font-size: 1.625rem; font-weight: 400">
+          Xem trên TV thông minh, Playstation, Xbox, Chromecast, Apple TV, đầu
+          phát Blu-ray và nhiều thiết bị khác.
+        </h2>
+      </div>
+
+      <div class="tagimg">
+        <img src="./img/tv.png" alt="" />
+        <video
+          class="our-story-card-video"
+          data-uia="our-story-card-video"
+          autoplay=""
+          playsinline=""
+          muted=""
+          loop=""
+        >
+          <source
+            src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+    </div>
+
+    <div class="contain" style="flex-direction: row-reverse">
+      <div style="width: 600px">
+        <h1
+          style="
+            min-width: 500px;
+            margin: auto;
+            font-size: 50px;
+            margin-top: 50px;
+          "
+        >
+          Tải xuống nội dung để xem ngoại tuyến.
+        </h1>
+        <h2
+          style="
+            font-size: 1.625rem;
+            font-weight: 400;
+            width: 500px;
+            margin-top: 15px;
+          "
+        >
+          Lưu lại những nội dung yêu thích một cách dễ dàng và luôn có thứ để
+          xem.
+        </h2>
+      </div>
+      <div style="position: relative">
+        <div class="tagimg">
+          <img src="./img/mobile-0819.jpg" alt="" />
+        </div>
+
+        <div class="cainamngang">
+          <div style="display: flex">
+            <img width="50px" height="70px" src="./img/boxshot.png" alt="" />
+            <div style="margin-top: 15px; margin-left: 15px">
+              <div>Cậu bé mất tích</div>
+              <div style="color: #0071eb">Đang tải xuống...</div>
+            </div>
+          </div>
+
+          <img width="50px" src="./img/download-icon.gif" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="contain" style="height: 180px">
+      <div style="width: 500px">
+        <h1 style="min-width: 500px; margin: auto; font-size: 50px">
+          Xem ở mọi nơi.
+        </h1>
+        <h2 style="font-size: 1.625rem; font-weight: 400">
+          Phát trực tuyến không giới hạn phim và chương trình truyền hình trên
+          điện thoại, máy tính bảng, máy tính xách tay và TV.
+        </h2>
+      </div>
+    </div>
+
+    <div class="contain" style="height: 430px; flex-direction: row-reverse">
+      <div style="width: 600px">
+        <h1
+          style="
+            min-width: 500px;
+            margin: auto;
+            font-size: 50px;
+            margin-top: 80px;
+          "
+        >
+          Tạo hồ sơ cho trẻ em.
+        </h1>
+        <h2
+          style="
+            font-size: 1.625rem;
+            font-weight: 400;
+            width: 500px;
+            margin-top: 15px;
+          "
+        >
+          Đưa các em vào những cuộc phiêu lưu với nhân vật được yêu thích trong
+          một không gian riêng. Tính năng này đi kèm miễn phí với tư cách thành
+          viên của bạn.
+        </h2>
+      </div>
+
+      <div class="tagimg">
+        <img
+          src="./img/AAAABbtRHxTEgmwtFXR4vBnwSO9UzWSascscH0PRpGcXYVkyVez31FciwrQ4bmD41KIrsypJG4Bf54yOJL82SDLL54SGCIdZov0ySklR.png"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div class="contain" style="height: 460px">
+      <div style="width: 600px">
+        <h1
+          style="
+            min-width: 500px;
+            margin: auto;
+            font-size: 50px;
+            margin-top: 0px;
+          "
+        >
+          Bạn có điện thoại Android? Hãy thử gói dịch vụ miễn phí mới của chúng
+          tôi!
+        </h1>
+        <h2
+          style="
+            font-size: 1.625rem;
+            font-weight: 400;
+            width: 500px;
+            margin-top: 15px;
+          "
+        >
+          Xem các bộ phim và chương trình truyền hình mới được tuyển chọn mà
+          không cần cung cấp thông tin thanh toán!
+        </h2>
+      </div>
+
+      <div class="tagimg" style="margin-top: 30px">
+        <img src="./img/vn.jpg" alt="" />
+      </div>
+    </div>
+
+    <div id="question" class="contain">
+      <h1
+        style="
+          min-width: 500px;
+
+          font-size: 50px;
+          margin-top: 0px;
+          margin-bottom: 20px;
+        "
+      >
+        Câu hỏi thường gặp
+      </h1>
+      <ul>
+        <li>
+          Netflix là gì?<i
+            onclick="tagclass(1,-1)"
+            id="close1"
+            style="transform: rotate(45deg); display: none"
+            class="fa-thin fa-plus"
+          ></i
+          ><i onclick="tagclass(1,1)" id="open1" class="fa-thin fa-plus"></i>
+        </li>
+        <div id="icon1" class="text close">
+          <div class="textli1">
+            Netflix là dịch vụ phát trực tuyến mang đến đa dạng các loại chương
+            trình truyền hình, phim, anime, phim tài liệu đoạt giải thưởng và
+            nhiều nội dung khác trên hàng nghìn thiết bị có kết nối Internet.<br><br>
+            Bạn có thể xem bao nhiêu tùy thích, bất cứ lúc nào bạn muốn mà không
+            gặp phải một quảng cáo nào – tất cả chỉ với một mức giá thấp hàng
+            tháng. Luôn có những nội dung mới để bạn khám phá và những chương
+            trình truyền hình, phim mới được bổ sung mỗi tuần!
+          </div>
+        </div>
+
+        <li>
+          Tôi phải trả bao nhiêu tiền để xem Netflix?<i
+            onclick="tagclass(2,-1)"
+            id="close2"
+            style="transform: rotate(45deg); display: none"
+            class="fa-thin fa-plus"
+          ></i
+          ><i onclick="tagclass(2,1)" id="open2" class="fa-thin fa-plus"></i>
+        </li>
+        <div id="icon2" class="text close">
+          <div class="textli1">
+            Xem Netflix trên điện thoại thông minh, máy tính bảng, TV thông
+            minh, máy tính xách tay hoặc thiết bị phát trực tuyến, chỉ với một
+            khoản phí cố định hàng tháng. Các gói dịch vụ với mức giá từ 70.000
+            ₫ đến 260.000 ₫ mỗi tháng. Không phụ phí, không hợp đồng.
+          </div>
+        </div>
+
+        <li>
+          Tôi có thể xem ở đâu?<i
+            onclick="tagclass(3,-1)"
+            id="close3"
+            style="transform: rotate(45deg); display: none"
+            class="fa-thin fa-plus"
+          ></i
+          ><i onclick="tagclass(3,1)" id="open3" class="fa-thin fa-plus"></i>
+        </li>
+        <div id="icon3" class="text close">
+          <div class="textli1">
+            Xem mọi lúc, mọi nơi. Đăng nhập bằng tài khoản Netflix của bạn để
+            xem ngay trên trang web netflix.com từ máy tính cá nhân, hoặc trên
+            bất kỳ thiết bị nào có kết nối Internet và có cài đặt ứng dụng
+            Netflix, bao gồm TV thông minh, điện thoại thông minh, máy tính
+            bảng, thiết bị phát đa phương tiện trực tuyến và máy chơi game.<br><br> Bạn
+            cũng có thể tải xuống các chương trình yêu thích bằng ứng dụng trên
+            iOS, Android hoặc Windows 10. Vào phần nội dung đã tải xuống để xem
+            trong khi di chuyển và khi không có kết nối Internet. Mang Netflix
+            theo bạn đến mọi nơi.
+          </div>
+        </div>
+        <li>
+          Làm thế nào để hủy?<i
+            onclick="tagclass(4,-1)"
+            id="close4"
+            style="transform: rotate(45deg); display: none"
+            class="fa-thin fa-plus"
+          ></i
+          ><i onclick="tagclass(4,1)" id="open4" class="fa-thin fa-plus"></i>
+        </li>
+        <div id="icon4" class="text close">
+          <div class="textli1">
+            Netflix rất linh hoạt. Không có hợp đồng phiền toái, không ràng
+            buộc. Bạn có thể dễ dàng hủy tài khoản trực tuyến chỉ trong hai cú
+            nhấp chuột. Không mất phí hủy – bạn có thể bắt đầu hoặc ngừng tài
+            khoản bất cứ lúc nào.
+          </div>
+        </div>
+        <li>
+          Tôi có thể xem gì trên Netflix?<i
+            onclick="tagclass(5,-1)"
+            id="close5"
+            style="transform: rotate(45deg); display: none"
+            class="fa-thin fa-plus"
+          ></i
+          ><i onclick="tagclass(5,1)" id="open5" class="fa-thin fa-plus"></i>
+        </li>
+        <div id="icon5" class="text close">
+          <div class="textli1">
+            Netflix có một thư viện phong phú gồm các phim truyện, phim tài
+            liệu, chương trình truyền hình, anime, tác phẩm giành giải thưởng
+            của Netflix và nhiều nội dung khác. Xem không giới hạn bất cứ lúc
+            nào bạn muốn.
+          </div>
+        </div>
+        <li>
+          Netflix có phù hợp cho trẻ em không?<i
+            onclick="tagclass(6,-1)"
+            id="close6"
+            style="transform: rotate(45deg); display: none"
+            class="fa-thin fa-plus"
+          ></i
+          ><i onclick="tagclass(6,1)" id="open6" class="fa-thin fa-plus"></i>
+        </li>
+        <div id="icon6" class="text close">
+          <div class="textli1">
+            Trải nghiệm Netflix Trẻ em có sẵn trong gói dịch vụ của bạn, trao
+            cho phụ huynh quyền kiểm soát trong khi các em có thể thưởng thức
+            các bộ phim và chương trình phù hợp cho gia đình tại không gian
+            riêng. <br><br>Hồ sơ Trẻ em đi kèm tính năng kiểm soát của cha mẹ (được bảo
+            vệ bằng mã PIN), cho phép bạn giới hạn độ tuổi cho nội dung con mình
+            được phép xem, cũng như chặn những phim hoặc chương trình mà bạn
+            không muốn các em nhìn thấy.
+          </div>
+        </div>
+      </ul>
+      <h3 style="margin-top: 20px; margin-bottom: 20px">
+        Bạn đã sẵn sàng xem chưa? Nhập email để tạo hoặc kích hoạt lại tư cách
+        thành viên của bạn.
+      </h3>
+      <div class="input">
+        <div class="thanh">
+          <div class="input">
+            <input
+              style="padding-top: 0"
+              id="input11"
+              onclick="Clic1()"
+              onblur="Blur1()"
+              type="text"
+            />
+            <div id="diachi1" onclick="dfhdshf1()">Địa chỉ email</div>
+          </div>
+          <button onclick="dk1()">Bắt đầu</button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div style="margin: 0 auto;margin-top: 50px;">
+              <div>Bạn có câu hỏi? Liên hệ với chúng tôi.</div>
+      <div style="display: flex;">
+        <ul id="cc">
+          <li>Câu hỏi thường gặp</li>
+          <li>Quan hệ với nhà đầu tư</li>
+          <li>Quyền riêng tư</li>
+          <li>Kiểm tra tốc độ</li>
+        </ul>
+
+        <ul>
+          <li>Trung tâm trợ giúp</li>
+          <li>Việc làm</li>
+          <li>Tùy chọn cookie</li>
+          <li>Thông báo pháp lý</li>
+        </ul>
+
+        <ul>
+          <li>Tài khoản</li>
+          <li>Các cách xem</li>
+          <li>Thông tin doanh nghiệp</li>
+          <li>Chỉ có trên Netflix</li>
+        </ul>
+
+        <ul>
+          <li>Trung tâm đa phương tiện</li>
+          <li>Điều khoản sử dụng</li>
+          <li>Liên hệ với chúng tôi</li>
+          
+        </ul>
+      </div>
+      <div>
+          <div class="btnlang" style="width:110px;margin-bottom: 30px;">
+        <i style="font-size: 13px" class="fa-solid fa-globe"></i> Tiếng Việt
+        <i
+          style="transform: rotate(90deg)"
+          class="fa-solid fa-caret-right"
+        ></i>
+         </div>
+         <div>Netflix Việt Nam</div>
+      </div>
+      </div>
+
+
+    </footer>
+  </body>
+  <script src="./index.js"></script>
+</html>

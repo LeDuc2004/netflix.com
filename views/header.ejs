@@ -1,0 +1,42 @@
+
+<header>
+    <div id="header-part1">
+      <div style="margin-right: -50px; margin-top: 10px">
+        <img
+          id="logo"
+          src="http://127.0.0.1:3000/img/Netflix_Logo_PMS.png"
+          alt=""
+          width="180px"
+          onclick="backHome()"
+        />
+      </div>
+      <ul>
+        <li><a href="http://127.0.0.1:3000/hanhdong">Hành động</a> </li>
+        <li><a href="http://127.0.0.1:3000/tinhcam">Tình cảm</a> </li>
+        <li><a href="http://127.0.0.1:3000/hoathinh">Hoạt hình</a></li>
+        <li><a href="http://127.0.0.1:3000/haihuoc">Hài hước</a></li>
+        <li><a href="http://127.0.0.1:3000/kinhdi">Kinh dị</a></li>
+      </ul>
+    </div>
+
+    <div id="header-part2">
+
+      <div class="hoverfv" id="user">
+        <i
+          style="color: lightblue; margin-top: 3px"
+          class="fa-solid fa-user"
+        ></i>
+        <div id="nameuser">1bingo@gmail.com</div>
+      </div>
+      <div class="hoverfv" id="signout" onclick="signout()">Đăng xuất</div>
+    </div>
+  </header>
+  <script>
+    document.getElementById("nameuser").innerHTML = localStorage.getItem("id")
+function backHome() {
+    window.location.href = "http://127.0.0.1:3000/home"
+}
+function signout() {
+    window.location.href = "http://127.0.0.1:3000/logout"
+}
+  </script>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix</title>
+    <link rel = "icon" href = "https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.png" type = "image/x-icon">
+    <link rel="stylesheet" href="dk.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  </head>
+  <body style="position: relative;">      
+    <img
+    onclick="home()"
+        style=" z-index: 1; margin: 20px 30px"
+        id="logo"
+        src="./img/Netflix_Logo_PMS.png"
+        alt=""
+        width="200px"
+      />
+    <div style="position: relative;" >
+
+
+      
+        <div id="khungdn" style="margin: 0 auto;">
+          <form id="khungdn-content">
+            <h1 style="margin-bottom: 30px;color: #e50914;">Đăng ký</h1>
+            <div style="display: flex; flex-direction: column; width: 100%">
+                <form action="" style="display: flex; flex-direction: column; width: 100%">
+            <input
+                placeholder="Địa chỉ email"
+                id="email"
+                type="text"
+                onblur="emailp()"
+                name="email"
+              />
+              <span class="spanerr"
+                  id="erremail" 
+                ></span
+              >
+              <input id="password" name="password" onblur="passwordp()" placeholder="Mật khẩu" type="password" />
+              <span id="errpassword" class="spanerr"
+                
+                ></span
+              >
+              <input id="cfpassword" name="cfpassword" onblur="cfpasswordp()" placeholder="Xác nhận mật khẩu" type="password" />
+              <span id="errcfpassword" class="spanerr"
+                
+                ></span
+              >
+                </form>
+
+
+              <button type="submit" id="btndn" >Đăng ký</button>
+
+            </div>
+
+            <div style="color: #737373">
+              Bạn đã có tài khoản Netflix?<a style="text-decoration: none;color: white;color: #0071eb;" href="http://localhost:3000/dangnhap">Đăng nhập ngay</a>
+            </div>
+            <div style="color: #8c8c8c;font-size: smaller;margin-top: 15px;">
+              Trang này được Google reCAPTCHA bảo vệ để đảm bảo bạn không phải
+              là robot. <a style="text-decoration: none;color: #0071eb;" href="">Tìm hiểu thêm</a>
+            </div>
+          </form>
+        
+      </div>
+      
+    </div>
+
+  </body>
+  <script src="./dk.js"></script>
+</html>

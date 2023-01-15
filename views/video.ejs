@@ -1,0 +1,14 @@
+<div style="background-color: black;width: 100%;height: 50px;"></div>
+
+<div id="list-video" style="width: 100%;position: relative;height: 550px;z-index: 0;">
+
+ </div>
+ <script>
+    let result = ''
+result = result + ` <video style='position: absolute;left:15%;top: -80px;'  width="900px" height="700px" controls autoplay loop>
+<source src="${localStorage.getItem("url")}" type="video/mp4">
+<source src="${localStorage.getItem("url")}" type="video/ogg">
+</video>`
+document.getElementById("list-video").innerHTML = result
+ </script>
+ 
